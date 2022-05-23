@@ -1,0 +1,341 @@
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -----------------Homepage---------------------- */
+
+* {
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: grid;
+}
+
+/* Background Image */
+
+.background-image {
+  background-color: #3b3b3bbb;
+  background-image: url("../images/history-banner.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  height: fit-content;
+}
+
+/* Navbar */
+
+header {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 50;
+  align-items: center;
+  padding: 5px 8%;
+}
+
+header:hover {
+  background-color: #060707af;
+  transition: all 0.3s ease 0s;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.logo {
+  color: #edf0f1;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.dropdown-button {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.dropdown-button:hover {
+  color: #0088a9;
+}
+
+.dropdown-list {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  background: white;
+  color: #323b40;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list a {
+  display: block;
+  padding: 10px;
+  color: #b3bdc4;
+  border-top: solid 1px #e0e0e0;
+}
+
+.dropdown-list a:hover {
+  background: #f0f0f0;
+  color: #323b40;
+}
+
+/* glass effect */
+
+.glass {
+  margin: 30px 0 100px;
+  padding: 20px 40px;
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* title animation */
+
+.title {
+  position: relative;
+  width: max-content;
+  margin: 0 auto 20px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--clr-accent-400);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.glass:hover .title::after {
+  transform: scaleX(1);
+}
+
+/* content cards */
+
+.content {
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: inline-flex;
+  flex: 1 1 21rem;
+  flex-wrap: wrap;
+  color: var(--clr-neutral-100);
+  background-color: #adadad;
+  background-blend-mode: multiply;
+  background-size: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  padding: 10rem 0 0;
+  margin: 20px 10px;
+  max-width: 35ch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: left;
+  align-self: normal;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  --padding: 1rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.6) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  transform: translateY(78%);
+  transition: transform 0.5s ease;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.card:hover .card-content > *:not(.card-title) {
+  opacity: 1;
+}
+
+.card-title {
+  position: relative;
+  width: max-content;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s ease;
+}
+
+.card:hover .card-title::after {
+  transform: scaleX(1);
+}
+
+.card-body {
+  color: rgb(255 255 255 /0.85);
+}
+
+.card-button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: auto;
+}
+
+.card-button:hover,
+.card-button:focus {
+  background-color: var(--clr-neutral-100);
+}
+
+#kolkata {
+  background-image: url("../images/homepage/kolkata.jpg");
+}
+
+#murshidabad {
+  background-image: url("../images/homepage/murshidabad.jpg");
+}
+
+#bankura {
+  background-image: url("../images/homepage/bankura.jpg");
+}
+
+#malda {
+  background-image: url("../images/homepage/malda.jpg");
+}
+
+#hoogly {
+  background-image: url("../images/homepage/hoogly.jpg");
+}
+
+#cooch-behar {
+  background-image: url("../images/homepage/cooch-bihar.jpg");
+}
+
+/* background */
+
+.kolkata {
+  background-image: url("../images/background/kolkata.jpg");
+}
+
+.murshidabad {
+  background-image: url("../images/background/murshidabad.jpg");
+}
+
+.bankura {
+  background-image: url("../images/background/bankura.jpg");
+}
+
+.malda {
+  background-image: url("../images/background/malda.jpg");
+}
+
+.hoogly {
+  background-image: url("../images/background/hoogly.jpg");
+}
+
+.cooch-behar {
+  background-image: url("../images/background/cooch-behar.jpg");
+}
+
+/* card images*/
+
+.card-img {
+  position: relative;
+  display: block;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 20px auto;
+  width: 35%;
+  height: 30%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+  transform: scale(2);
+}
