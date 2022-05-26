@@ -331,7 +331,7 @@ button {
   padding: 0;
   margin: 20px auto;
   width: 35%;
-  height: 30%;
+  aspect-ratio: 16/10;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
