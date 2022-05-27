@@ -8,6 +8,18 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #323b40;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #0088a9;
+}
+
 /* -----------------Homepage---------------------- */
 
 * {
