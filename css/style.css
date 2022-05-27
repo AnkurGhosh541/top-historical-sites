@@ -339,3 +339,53 @@ button {
 .card-img:hover {
   transform: scale(2);
 }
+
+
+/* media queries*/
+
+@media screen and (max-width: 600px) {
+
+  p {
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .glass {
+    text-align: center;
+    padding: 20px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-content {
+    transform: translateY(70%);
+  }
+
+  .top-row {
+    transform: translateY(75%);
+  }
+
+  .card-img {
+    width: 75%;
+  }
+
+  .card-img:hover {
+    transform: scale(1.75);
+  }
+}
