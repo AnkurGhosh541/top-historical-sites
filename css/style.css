@@ -150,6 +150,7 @@ button {
   position: relative;
   width: max-content;
   margin: 0 auto 20px;
+  padding-bottom: 5px;
 }
 
 .title::after {
@@ -232,6 +233,7 @@ button {
 .card-title {
   position: relative;
   width: max-content;
+  padding-bottom: 2px;
 }
 
 .card-title::after {
