@@ -87,6 +87,16 @@ button {
   z-index: 10;
 }
 
+
+.mobile-dropdown {
+  display: none;
+}
+
+svg {
+  fill: var(--clr-neutral-100);
+  font-weight: 900;
+}
+
 .dropdown-button {
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -350,6 +360,59 @@ button {
   p {
     font-size: 17px;
     line-height: 1;
+  }
+
+  header {
+    padding: 5px 5%;
+    background-color: #060707fb;
+    position: fixed;
+  }
+
+  header:hover {
+    background-color: #060707fb;
+  }
+
+  .content {
+    margin-top: 30px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  ul {
+    padding-inline-start: 0;
+  }
+
+  .nav-links {
+    width: max-content;
+    text-align: right;
+    margin: 0;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .nav-links .desktop-dropdown {
+    display: none;
+  }
+
+  .mobile-dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-list {
+    left: -100px;
+  }
+
+  .dropdown-button svg {
+    transition: transform 0.5s ease;
+  }
+
+  .dropdown-button:hover svg {
+    transform: rotate(90deg);
   }
 
   .title {
