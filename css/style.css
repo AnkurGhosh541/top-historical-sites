@@ -361,6 +361,7 @@ button {
   .glass {
     text-align: center;
     padding: 20px 20px;
+    margin-bottom: 50px;
   }
 
   .row {
