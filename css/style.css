@@ -8,6 +8,16 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: grid;
+}
+
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -18,18 +28,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #0088a9;
-}
-
-/* -----------------Homepage---------------------- */
-
-* {
-  user-select: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  margin: 0;
-  display: grid;
 }
 
 /* Background Image */
@@ -106,7 +104,6 @@ button {
 
 svg {
   fill: var(--clr-neutral-100);
-  font-weight: 900;
 }
 
 .dropdown-button {
@@ -371,7 +368,7 @@ footer {
   margin: 0;
   position: fixed;
   bottom: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
   z-index: 50;
@@ -386,6 +383,15 @@ footer {
 
 .bottom-links li a:hover svg {
   fill: #0088a9;
+}
+
+.hidden-link {
+  margin: 0 24px;
+}
+
+.hidden-icon {
+  fill: #060707f3;
+  display: none;
 }
 
 
@@ -490,5 +496,9 @@ footer {
 
   .card-img:hover {
     transform: scale(1.65);
+  }
+
+  footer {
+    display: flex;
   }
 }
