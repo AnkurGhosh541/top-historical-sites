@@ -376,12 +376,12 @@ svg {
 
   header {
     padding: 5px 5%;
-    background-color: #060707fb;
+    background-color: #060707f5;
     position: fixed;
   }
 
   header:hover {
-    background-color: #060707fb;
+    background-color: #060707f5;
   }
 
   .content {
@@ -420,6 +420,7 @@ svg {
   }
 
   .dropdown-button svg {
+    transform: rotate(0);
     transition: transform 0.5s ease;
   }
 
