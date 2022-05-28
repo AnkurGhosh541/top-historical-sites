@@ -406,12 +406,12 @@ footer {
 
   header {
     padding: 5px 5%;
-    background-color: #060707f5;
+    background-color: #060707f3;
     position: fixed;
   }
 
   header:hover {
-    background-color: #060707f5;
+    background-color: #060707f3;
   }
 
   .content {
@@ -456,6 +456,7 @@ footer {
 
   .dropdown-button:hover svg {
     transform: rotate(90deg);
+    fill: #0088a9;
   }
 
   .title {
