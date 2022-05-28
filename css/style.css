@@ -103,7 +103,7 @@ button {
 }
 
 svg {
-  fill: var(--clr-neutral-100);
+  fill: #edf0f1;
 }
 
 .dropdown-button {
