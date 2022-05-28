@@ -364,6 +364,30 @@ svg {
   transform: scale(2);
 }
 
+/* footer navbar */
+
+footer {
+  box-sizing: border-box;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 50;
+  align-items: center;
+  padding: 5px 8%;
+  background-color: #060707f5;
+}
+
+.bottom-links a {
+  padding: 0 50px;
+}
+
+.bottom-links li a:hover svg {
+  fill: #0088a9;
+}
+
 
 /* media queries*/
 
@@ -465,6 +489,6 @@ svg {
   }
 
   .card-img:hover {
-    transform: scale(1.75);
+    transform: scale(1.65);
   }
 }
